@@ -1,0 +1,107 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+  --tw-gray-300: #D1D5DB;
+  --tw-gray-600: #4B5563;
+  --tw-gray-700: #374151;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  font-family: "游ゴシック", "Yu Gothic", "Arial Nova", Arial, sans-serif;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+.card {
+  border: 1px solid #D1D5DB;
+  border-radius: 20px;
+
+  &-title {
+
+  }
+
+  &-description {
+
+  }
+}
+
+#mwv {
+  border-width: 1px 0 1px 0;
+  border-color: #D1D5DB;
+  border-style: solid;
+  
+  & > div {
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    height: 768px;
+  }
+
+  .mwv-card {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+    width: 400px;
+    box-sizing: border-box;
+    padding: 0 3rem;
+    border-left: 1px solid var(--tw-gray-300);
+    flex-wrap: wrap;
+
+    &:last-child {
+      border-right: 1px solid var((--tw-gray-300));
+    }
+    
+    &-word { 
+      color: var(--tw-gray-300);
+      font-size: 16rem;
+      line-height: 16rem;
+      font-weight: 200;
+      width: 100%;
+    }
+
+    &-title {
+      color: var(--tw-gray-700);
+      font-size: 1.5rem;
+      margin-bottom: 3rem;
+      font-weight: bold;
+      width: 100%;
+    }
+
+    &-description {
+      color: var(--tw-gray-600);
+      font-size: 1rem;
+      line-height: 1.5rem;
+    }
+  }
+}
+
+#approaches {
+  .card-approaches {
+    width: 45%;
+    font-weight: 500;
+    border: 1px solid var(--tw-gray-300);
+    border-radius: 20px;
+    box-sizing: border-box;
+    padding: 32px;
+  }
+}
